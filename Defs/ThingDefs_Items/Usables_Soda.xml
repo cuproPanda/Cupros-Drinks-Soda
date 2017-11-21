@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--================== Bases ==================-->
+
+	<ThingDef Name="SodaResourceBase" ParentName="CPD_DrinkBase" Abstract="True">
+		<ingestible>
+			<foodType>Fluid, Processed</foodType>
+			<nutrition>0.02</nutrition>
+			<joy>0.10</joy>
+			<joyKind>Gluttonous</joyKind>
+			<ingestSound>CPD_DrinkSoda</ingestSound>
+		</ingestible>
+	</ThingDef>
+
+	<!-- ========================== Sodas ============================== -->
+
+	<ThingDef ParentName="SodaResourceBase">
+		<defName>CPD_Chocolate</defName>
+		<label>chocolate soda</label>
+		<description>A mixture of chocolate, milk, and soda. Best served cold.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Usable/ChocolateSoda</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>8</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>CPD_Sodas</li>
+		</thingCategories>
+		<ingestible>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<preferability>DesperateOnly</preferability>
+			<nutrition>0.10</nutrition>
+			<joy>0.12</joy>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<chance>1</chance>
+					<hediffDef>CPD_Soda</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>5</daysToRotStart>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="SodaResourceBase">
+		<defName>CPD_RootBeer</defName>
+		<label>root beer</label>
+		<description>An unusual ancient brew consisting of roots and bark from trees and plants. A favorite among colonial settlers.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Usable/RootBeer</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>6</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>CPD_Sodas</li>
+		</thingCategories>
+		<ingestible>
+			<nutrition>0.05</nutrition>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<chance>1</chance>
+					<hediffDef>CPD_Soda</hediffDef>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<chance>1</chance>
+					<hediffDef>CPD_RootBeer</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+
+	<ThingDef ParentName="SodaResourceBase">
+		<defName>CPD_Berry</defName>
+		<label>berry soda</label>
+		<description>The perfect mixture of sweet and tart, combined with refreshing bubbles.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Usable/BerrySoda</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>8</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>CPD_Sodas</li>
+		</thingCategories>
+		<ingestible>
+			<nutrition>0.05</nutrition>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<chance>1</chance>
+					<hediffDef>CPD_Soda</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+
+	<ThingDef ParentName="SodaResourceBase">
+		<defName>CPD_Agave</defName>
+		<label>agave soda</label>
+		<description>A lightly flavored, sweetened soda made from cacti. Favored amongst shrubland muffalo herders. </description>
+		<graphicData>
+			<texPath>Cupro/Item/Usable/AgaveSoda</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>8</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>CPD_Sodas</li>
+		</thingCategories>
+		<ingestible>
+			<nutrition>0.05</nutrition>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<chance>1</chance>
+					<hediffDef>CPD_Soda</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+
+</Defs>

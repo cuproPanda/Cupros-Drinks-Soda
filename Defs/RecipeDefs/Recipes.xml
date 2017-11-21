@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef Name="SodaBase" Abstract="True">
+		<workSpeedStat>BrewingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<recipeUsers>
+			<li>CPD_DrinksTable</li>
+		</recipeUsers>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef Name="SweetSodaBase" ParentName="SodaBase" Abstract="True">
+		<workAmount>1400</workAmount>
+		<targetCountAdjustment>6</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CPD_Syrup</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CPD_Syrup</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<Cooking>6</Cooking>
+		</skillRequirements>
+		<researchPrerequisite>CPD_SodaBrewing</researchPrerequisite>
+	</RecipeDef>
+
+
+
+
+	<!--======== Base Inheritors ========-->
+
+
+	<RecipeDef ParentName="SweetSodaBase">
+		<defName>CPD_RootBeer</defName>
+		<label>brew root beer</label>
+		<description>Brew a carbonated beverage made from tasty strips of bark and roots. </description>
+		<jobString>Brewing root beer</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CPD_FrassRoot</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WoodLog</li>
+				<li>CPD_FrassRoot</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CPD_RootBeer>6</CPD_RootBeer>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SweetSodaBase">
+		<defName>CPD_BrewBerry</defName>
+		<label>brew berry soda</label>
+		<description>Brew a carbonated beverage made from berries and a sweet syrup. </description>
+		<jobString>Brewing berry soda</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawBerries</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RawBerries</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CPD_Berry>6</CPD_Berry>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SweetSodaBase">
+		<defName>CPD_BrewAgave</defName>
+		<label>brew agave soda</label>
+		<description>Brew a carbonated beverage made from agave nectar and a sweet syrup.</description>
+		<jobString>Brewing agave soda</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawAgave</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RawAgave</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CPD_Agave>6</CPD_Agave>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CPD_BrewSimpleSyrup</defName>
+		<label>brew simple syrup</label>
+		<description>Brew syrup by reducing foods containing a large amount of sugar. </description>
+		<jobString>Brewing simple syrup</jobString>
+		<workSpeedStat>BrewingSpeed</workSpeedStat>
+		<workAmount>500</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawCorn</li>
+						<li>RawAgave</li>
+						<li>RawBerries</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RawCorn</li>
+				<li>RawAgave</li>
+				<li>RawBerries</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CPD_Syrup>1</CPD_Syrup>
+		</products>
+		<recipeUsers>
+			<li>CPD_DrinksTable</li>
+		</recipeUsers>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CPD_SodaBrewing</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CPD_BrewSimpleSyrupBulk</defName>
+		<label>brew simple syrup (bulk)</label>
+		<description>Brew syrup by reducing foods containing a large amount of sugar. </description>
+		<jobString>Brewing simple syrup</jobString>
+		<workSpeedStat>BrewingSpeed</workSpeedStat>
+		<workAmount>2000</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<targetCountAdjustment>6</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawCorn</li>
+						<li>RawAgave</li>
+						<li>RawBerries</li>
+					</thingDefs>
+				</filter>
+				<count>60</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RawCorn</li>
+				<li>RawAgave</li>
+				<li>RawBerries</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CPD_Syrup>6</CPD_Syrup>
+		</products>
+		<recipeUsers>
+			<li>CPD_DrinksTable</li>
+		</recipeUsers>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CPD_SodaBrewing</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CPD_BrewChocolateSoda</defName>
+		<label>brew chocolate soda</label>
+		<description>Brew chocolate, milk, and syrup; add to soda. </description>
+		<jobString>Brewing chocolate soda</jobString>
+		<workSpeedStat>BrewingSpeed</workSpeedStat>
+		<workAmount>500</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<targetCountAdjustment>6</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chocolate</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Milk</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CPD_Syrup</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chocolate</li>
+				<li>Milk</li>
+				<li>CPD_Syrup</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CPD_Chocolate>6</CPD_Chocolate>
+		</products>
+		<recipeUsers>
+			<li>CPD_DrinksTable</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Cooking>7</Cooking>
+		</skillRequirements>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CPD_SodaBrewing</researchPrerequisite>
+	</RecipeDef>
+
+</Defs>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<JoyGiverDef>
+		<defName>CPD_DrinkRegularSoda</defName>
+		<giverClass>JoyGiver_Ingest</giverClass>
+		<baseChance>3</baseChance>
+		<thingDefs>
+			<li>CPD_Chocolate</li>
+			<li>CPD_RootBeer</li>
+			<li>CPD_Berry</li>
+			<li>CPD_Agave</li>
+		</thingDefs>
+		<joyKind>Gluttonous</joyKind>
+	</JoyGiverDef>
+
+	<JoyGiverDef>
+		<defName>CPD_DrinkKokaSoda</defName>
+		<giverClass>JoyGiver_Ingest</giverClass>
+		<baseChance>3.5</baseChance>
+		<thingDefs>
+			<li>CPD_Koka</li>
+		</thingDefs>
+		<joyKind>Gluttonous</joyKind>
+	</JoyGiverDef>
+
+	<JoyGiverDef>
+		<defName>CPD_DrinkPeppiSoda</defName>
+		<giverClass>JoyGiver_Ingest</giverClass>
+		<baseChance>3.5</baseChance>
+		<thingDefs>
+			<li>CPD_Peppi</li>
+		</thingDefs>
+		<joyKind>Chemical</joyKind>
+	</JoyGiverDef>
+
+</Defs>

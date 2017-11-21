@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="SodaResourceBase">
+		<defName>CPD_Koka</defName>
+		<label>Koka soda</label>
+		<description>An uplifting soda popular throughout the galaxy. Banned in some sectors due to its trace pharmaceutical ingredients.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Usable/KokaSoda</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>10</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>CPD_Sodas</li>
+		</thingCategories>
+		<ingestible>
+			<nurseable>true</nurseable>
+			<joyKind>Chemical</joyKind>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<chance>1</chance>
+					<hediffDef>CPD_Soda</hediffDef>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<chance>1</chance>
+					<hediffDef>CPD_KokaSoda</hediffDef>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>PsychiteTolerance</hediffDef>
+					<severity>0.005</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Psychite</chemical>
+				<addictiveness>0.005</addictiveness>
+				<minToleranceToAddict>0.05</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.05</existingAddictionSeverityOffset>
+				<needLevelOffset>0.03</needLevelOffset>
+				<listOrder>100</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.01</min>
+					<max>0.04</max>
+				</overdoseSeverityOffset>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="SodaResourceBase">
+		<defName>CPD_Peppi</defName>
+		<label>Peppi soda</label>
+		<description>A stronger version of Koka, Peppi is known for its stimulating properties. Favored among hunters and doctors.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Usable/PeppiSoda</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>11</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>CPD_Sodas</li>
+		</thingCategories>
+		<ingestible>
+			<nurseable>true</nurseable>
+			<joyKind>Chemical</joyKind>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<chance>1</chance>
+					<hediffDef>CPD_Soda</hediffDef>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<chance>1</chance>
+					<hediffDef>CPD_PeppiSoda</hediffDef>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>PsychiteTolerance</hediffDef>
+					<severity>0.01</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Psychite</chemical>
+				<addictiveness>0.01</addictiveness>
+				<minToleranceToAddict>0.05</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>0.05</needLevelOffset>
+				<listOrder>100</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.04</min>
+					<max>0.08</max>
+				</overdoseSeverityOffset>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

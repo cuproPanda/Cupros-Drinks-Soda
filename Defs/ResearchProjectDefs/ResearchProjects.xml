@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>CPD_SodaBrewing</defName>
+		<label>Soda brewing</label>
+		<description>Use fermenting yeast to add CO2 to water, producing a desirable effervescent effect.</description>
+		<tab>cP</tab>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1.5</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

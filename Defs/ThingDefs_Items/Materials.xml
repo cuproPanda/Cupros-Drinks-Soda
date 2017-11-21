@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>CPD_FrassRoot</defName>
+		<label>frass root</label>
+		<description>A harvested root, ready for brewing into root beer.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Material/FrassRoot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>5</MarketValue>
+			<Mass>0.1</Mass>
+		</statBases>
+		<stackLimit>25</stackLimit>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+</Defs>
+
+
+
+
+
+

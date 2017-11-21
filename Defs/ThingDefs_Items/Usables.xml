@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CPD_DrinkBase">
+		<defName>CPD_Syrup</defName>
+		<label>syrup</label>
+		<description>A bottle of syrup made by reducing foods containing a large amount of sugar.</description>
+		<graphicData>
+			<texPath>Cupro/Item/Usable/Syrup</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>8</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>CPD_Drinks</li>
+		</thingCategories>
+		<ingestible>
+			<preferability>DesperateOnly</preferability>
+			<nutrition>0.1</nutrition>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<chance>1</chance>
+					<hediffDef>CPD_Syrup</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+
+</Defs>

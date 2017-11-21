@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThingCategoryDef>
+		<defName>CPD_Sodas</defName>
+		<label>sodas</label>
+		<parent>CPD_Drinks</parent>
+		<iconPath>Cupro/Item/Usable/BerrySoda/BerrySoda_a</iconPath>
+	</ThingCategoryDef>
+
+</Defs>
