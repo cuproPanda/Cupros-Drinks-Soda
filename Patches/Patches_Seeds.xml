@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- If SeedsPlease is found, add seeds -->
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="CuprosDrinks.PatchOperationModDependent">
+				<modName>SeedsPlease</modName>
+			</li>
+			<li Class="PatchOperationInsert">
+				<xpath>/Defs/ThingDef[@Name="CPD_ThingInsertion"]</xpath>
+				<order>Prepend</order>
+				<value>
+					<SeedsPlease.SeedDef ParentName="SeedBase">
+						<defName>CPD_SeedFrass</defName>
+						<label>frassroot seeds</label>
+						<plant>CPD_PlantFrassRoot</plant>
+						<graphicData><texPath>Cupro/Item/Material/Seeds/SeedFrass</texPath></graphicData>
+					</SeedsPlease.SeedDef>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="CuprosDrinks.PatchOperationModDependent">
+				<modName>SeedsPlease</modName>
+			</li>
+			<li Class="PatchOperationInsert">
+				<xpath>/Defs/RecipeDef[@Name="CPD_RecipeInsertion"]</xpath>
+				<order>Prepend</order>
+				<value>					
+					<RecipeDef ParentName="ExtractSeed">
+						<defName>CPD_ExtractSeedFrass</defName>
+						<label>extract frassroot seeds</label>
+						<description>Extract seeds from frassroots.</description>
+						<recipeUsers>
+							<li>PlantProcessingTable</li>
+						</recipeUsers>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>CPD_FrassRoot</li>
+									</thingDefs>
+								</filter>
+								<count>10</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>CPD_FrassRoot</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<products>
+							<CPD_SeedFrass>5</CPD_SeedFrass>
+						</products>
+					</RecipeDef>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>
