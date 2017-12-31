@@ -12,7 +12,7 @@
 			<li>Brewing</li>
 		</prerequisites>
 		<researchViewX>1</researchViewX>
-		<researchViewY>1.5</researchViewY>
+		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>
 
 </Defs>
